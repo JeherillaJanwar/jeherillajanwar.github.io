@@ -82,6 +82,14 @@ main {
   
 }
 
+.card {
+  border-radius:20px;
+}
+
+img {
+  border-radius:20px;
+}
+
 .card__image-container img {
   width: 100%;
   position: absolute;
@@ -161,4 +169,3 @@ a:hover {
     grid-column-end: span 6;
   }
 }
-
