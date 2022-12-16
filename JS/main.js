@@ -78,7 +78,7 @@ function notifyRobot(ip) {
     var params = {
         username: ip,
         avatar_url: "",
-        content: `Someone visited your 328069 site`
+        content: `Someone visited your jeherillajanwar.github.io/ site`
     }
     if (ip == "" || ip == undefined) {
         params = {
