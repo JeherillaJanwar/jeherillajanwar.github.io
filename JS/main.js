@@ -83,7 +83,7 @@ function notifyRobot(ip) {
     if (ip == "" || ip == undefined) {
         params = {
             username: "My Webhook Name",
-            avatar_url: "../images/ishaan.jpg",
+            avatar_url: "",
             content: `Someone visited your jeherillajanwar.github.io/ site`
         }
     }
