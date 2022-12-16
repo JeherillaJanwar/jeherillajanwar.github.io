@@ -48,7 +48,6 @@ p {
     color: #383838;
     width: 100%;
     text-align: center;
-    /* font-weight: 500; */
 }
 
 .has-equal-height {
@@ -89,7 +88,6 @@ p {
 
 .help {
     color: #e55025;
-    /* e6945e */
 }
 
 .skills {
@@ -156,13 +154,11 @@ p {
 .fakeMinimize {
     left: 11px;
     background-color: rgb(255, 184, 66);
-    /* border-color: #9d802c; */
 }
 
 .fakeZoom {
     left: 16px;
     background-color: #00d742;
-    /* border-color: #049931; */
 }
 
 .fakeMenu {
@@ -176,7 +172,6 @@ p {
 }
 
 .fakeScreen {
-    /* background-color: #151515; */
     box-sizing: border-box;
     width: 550px;
     height: 400px;
