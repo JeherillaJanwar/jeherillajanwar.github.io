@@ -76,10 +76,16 @@ function notifyRobot(ip) {
         return
     }
     var params = {
-        username: ip,
+        username: "Visit Alert",
         avatar_url: "",
-        content: `<@982638868459290644> Someone visited your jeherillajanwar.github.io/ site`
+        "embeds": [{
+            "title": "Visit Alert!",
+            "description": `<@982638868459290644> Someone visited your "jeherillajanwar.github.io" site from ${ip}`,
+            "color": 1127128,
+            "url": "https://jeherillajanwar.github.io/"
+        }]
     }
+    // rarely...
     if (ip == "" || ip == undefined) {
         params = {
             username: "My Webhook Name",
@@ -87,6 +93,7 @@ function notifyRobot(ip) {
             content: `<@982638868459290644> Someone visited your jeherillajanwar.github.io/ site`
         }
     }
+    
     const request = new XMLHttpRequest();
     request.open("POST", "https://discord.com/api/webhooks/1053424555517022429/bP3DNkD_hDrvtMBvi-Ca6dTRWAxh1ytqr0NVEBF0CGS5xL65KAleALqowTdsG39x89i2");
     sentStuff = true;
@@ -121,5 +128,3 @@ var interval = setInterval(function() {
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
 }, 250);
-
-
