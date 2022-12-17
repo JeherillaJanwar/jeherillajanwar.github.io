@@ -11,4 +11,4 @@ Portfolio of <code>Ishaan Sharma</code>
 - Public IP Logging ---------- (Gets deleted after 1 day)
 
 
-<b>I have NO intention sell/use your data.</b>
+<b>I have NO intention sell/use your data in any ways or forms.</b>
