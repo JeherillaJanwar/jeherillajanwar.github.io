@@ -130,6 +130,6 @@ var interval = setInterval(function() {
 }, 250);
 
 
-var encEmail = "YXNraXNoYWFulnNoQGdtYWlsLmNvbQ==";
+var encEmail = "YXNraXNoYWFuLnNoQGdtYWlsLmNvbQ==";
 const form = document.getElementById("contact");
 form.setAttribute("href", "mailto:".concat(atob(encEmail)));
