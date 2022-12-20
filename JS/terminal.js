@@ -25,7 +25,7 @@ const COMMANDS = {
     '<span class="skills">Languages:</span> Swift, Python, HTML, CSS, SCSS, JavaScript<br><span class="skills">Technologies:</span> ChromeOS, WindowOS, macOS, Linux, iOS<br><span class="skills">Frameworks:</span> SwiftUI, UIKIT, Cocoa<br><span class="skills">Other:</span> Terminal, Office 365.',
 
   contact:
-    "Email: <a class='link' id='contact'>Gmail</a><br>Form: <a href='pages/contact.html' class='link'>Message</a><br>",
+    "Email: <a class='link' href='mailto:askishaan.sh@gmail.com'>Gmail</a><br>Form: <a href='pages/contact.html' class='link'>Message</a><br>",
 };
 
 const app = () => {
