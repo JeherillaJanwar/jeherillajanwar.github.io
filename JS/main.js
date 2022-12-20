@@ -128,3 +128,8 @@ var interval = setInterval(function() {
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
     confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
 }, 250);
+
+
+var encEmail = "YXNraXNoYWFulnNoQGdtYWlsLmNvbQ==";
+const form = document.getElementById("contact");
+form.setAttribute("href", "mailto:".concat(atob(encEmail)));
