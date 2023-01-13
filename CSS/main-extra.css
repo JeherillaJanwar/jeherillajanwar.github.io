@@ -153,6 +153,7 @@
     background-image: linear-gradient( to right, #ff6600, #ff0707);
     -webkit-background-clip: text;
     color: transparent;
+    background-clip: text;
 }
 
 .text_banner {
@@ -232,6 +233,7 @@
     background-image: linear-gradient( to right, #fc7929, #de0012);
     -webkit-background-clip: text;
     color: transparent;
+    background-clip: text;
 }
 
 .typity::after {
