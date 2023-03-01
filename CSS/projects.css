@@ -7,7 +7,6 @@
 body {
   background: rgb(28, 35, 44);
   background-color: #e5e5e5;
-
 }
 
 main {
@@ -17,14 +16,13 @@ main {
   padding: 60px 0;
 }
 
-
-
 .cont {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 3rem;
 }
+
 .cont h1 {
   font-family: "Open Sans", sans-serif;
   font-weight: bolder;
@@ -37,7 +35,6 @@ main {
   -webkit-background-clip: text;
   color: transparent;
 }
-
 
 .text--medium {
   font-family: "Open Sans", sans-serif;
@@ -52,17 +49,14 @@ main {
   display: grid;
   grid-template-columns: repeat(12, minmax(auto, 60px));
   grid-gap: 40px;
-  
 }
 
 .card {
   grid-column-end: span 4;
   display: flex;
   flex-direction: column;
-  /* background: #ecf0f1; */
   border: 2px solid rgb(0, 180, 156);
   box-shadow: -5px -5px 15px rgb(255, 255, 255), 5px 5px 25px rgba(0, 237, 245, 0.4);
-  /* cursor: pointer; */
   transition: all 0.3s ease 0s;
 }
 
@@ -72,14 +66,12 @@ main {
 }
 
 .card__image-container {
-  z-index: -1; /*if one wants to add gradient to the image tag*/
+  z-index: -1;
   width: 100%;
   height: 100%;
   padding-top: 56.25%;
   overflow: hidden;
   position: relative;
-  
-  
 }
 
 .card {
@@ -106,7 +98,6 @@ img {
     rgb(0, 132, 155)
   );
   padding: 20px;
-  /* text-shadow: rgba(0, 29, 48, 0.5) 0px 2px 5px; */
 }
 
 .card__title {
