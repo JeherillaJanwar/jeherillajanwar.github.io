@@ -1,4 +1,4 @@
-let getIP;
+var getIP;
 let typed = "";
 const element = document.querySelector(".typity");
 
