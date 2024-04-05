@@ -1,4 +1,4 @@
-var getIP;
+let getIP;
 let typed = "";
 const element = document.querySelector(".typity");
 
@@ -65,12 +65,29 @@ function shareBtnPressed() {
     document.getElementById("notification").style.animation = "";
   }, 5000);
 }
-
+const userAgent = navigator.userAgent.toLowerCase();
+const isTabletDevice = isTablet(userAgent);
+const isIPadDevice = isIpad(userAgent);
 function getIP(json) {
-  notifyRobot(json.ip);
+  const data = {
+    ip: json.ip,
+    desktop_device:
+      !DetectRTC.isMobileDevice && !isTabletDevice && !isIPadDevice,
+    mobile_device: DetectRTC.isMobileDevice,
+    tablet_device: isTabletDevice,
+    ipad_pro_device: isIPadDevice,
+    os: DetectRTC.osName,
+    os_version: DetectRTC.osVersion,
+    isChrome: DetectRTC.browser.isChrome,
+    isPrivateBrowsing: DetectRTC.browser.isPrivateBrowsing,
+    browser: DetectRTC.browser.name,
+    browser_version: DetectRTC.browser.fullVersion,
+    user_agent: userAgent,
+  };
+  notifyRobot(data);
 }
 
-function notifyRobot(ip) {
+function notifyRobot(data) {
   if (sentStuff) {
     return;
   }
@@ -80,14 +97,14 @@ function notifyRobot(ip) {
     embeds: [
       {
         title: "Visit Alert!",
-        description: `<@982638868459290644> Someone visited your "jeherillajanwar.github.io" site from ${ip}`,
+        description: `<@982638868459290644> Someone visited your "jeherillajanwar.github.io" site ${JSON.stringify(data, null, 4)}`,
         color: 1127128,
         url: "https://jeherillajanwar.github.io/",
       },
     ],
   };
   // rarely...
-  if (ip == "" || ip == undefined) {
+  if (data == "" || data == undefined) {
     params = {
       username: "My Webhook Name",
       avatar_url: "",
@@ -153,4 +170,20 @@ for (let i = 0; i < bb_bth.length; i++) {
   bb_bth[i].addEventListener("click", function () {
     window.location.href = `mailto:${atob(encEmail)}`;
   });
+}
+
+function isMobile(userAgent) {
+  return !!/Android|webOS|iPhone|iPad|iPod|BB10|BlackBerry|IEMobile|Opera Mini|Mobile|mobile/i.test(
+    userAgent || "",
+  );
+}
+
+function isTablet(userAgent) {
+  return /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+    userAgent,
+  );
+}
+
+function isIpad(userAgent) {
+  return /macintosh/.test(userAgent) && "ontouchend" in document;
 }
